@@ -1,7 +1,9 @@
+chrome.commands.getAll((...args) => console.log(args, 'args'));
+
 chrome.commands.onCommand.addListener(function(command) {
   chrome.windows.getCurrent({ populate: true }, window => {
     const commands = command.split(":");
-    if (commands[0] !== "change-tab") {
+    if (commands[0] !== "my-change-tab") {
       return null;
     }
     const payload = Number(commands[1]);
