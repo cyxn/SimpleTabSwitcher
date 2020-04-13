@@ -1,0 +1,52 @@
+{
+  "manifest_version": 2,
+
+  "name": "SimpleTabSwitcher-pt1",
+  "description": "use option(alt) + 1...9 to change current tab. 9 — always last tab",
+  "version": "0.1.4",
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "commands": {
+    "change-tab:9": {
+      "suggested_key": {
+        "default": "Alt+9",
+        "mac": "Alt+9"
+      },
+      "description": "Change to last tab"
+    },
+    "change-tab:1": {
+      "suggested_key": {
+        "default": "Alt+1",
+        "mac": "Alt+1"
+      },
+      "description": "Change to tab number 1"
+    },
+    "change-tab:2": {
+      "suggested_key": {
+        "default": "Alt+2",
+        "mac": "Alt+2"
+      },
+      "description": "Change to tab number 2"
+    },
+    "change-tab:3": {
+      "suggested_key": {
+        "default": "Alt+3",
+        "mac": "Alt+3"
+      },
+      "description": "Change to tab number 3"
+    }
+  },
+
+  "permissions": ["tabs", "activeTab", "http://*/*", "https://*/*"]
+}

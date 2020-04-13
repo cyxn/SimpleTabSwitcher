@@ -1,0 +1,8 @@
+{
+  "name": "tab-navigate",
+  "version": "0.1.0",
+  "description": "use option(alt) + 1...9 to change current tab. 9 — always last tab",
+  "scripts": {
+    "build": "node scripts/build.js"
+  }
+}
